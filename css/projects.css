@@ -1,0 +1,161 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background: #0f172a;
+    position: relative;
+  }
+  
+  header {
+    background: #1e293b;
+    padding: 1rem 2rem;
+    position: sticky;
+    margin: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .nav-links a.active {
+    color: gold;
+    font-weight: bold;
+  }
+  
+  footer {
+    background: #1e293b;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    background-color: gold;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 2%;
+  }
+  .hero {
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+    padding: 1rem;
+  }
+  /* Background Icons Container */
+  #bg-icons-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  /* Tech Icons */
+  .tech-bg-icon {
+    position: absolute;
+    opacity: 0.15;
+    animation: bounce 5s ease-in-out infinite;
+  }
+  
+  .tech-bg-icon:nth-child(even) {
+    animation-direction: alternate-reverse;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(40px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+
+/* Project Cards Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
+  .project-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid gold;
+    border-radius: 12px;
+    padding: 15px;
+    color: #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+  }
+  
+  .project-card h3 {
+    color: gold;
+    margin-bottom: 10px;
+  }
+
+
+  .project-img {
+    width: 100%;
+    height: 200px; /* Removes stretching and keeps natural height */
+    object-fit: contain; /* Ensures image scales properly without distortion */
+    image-rendering: auto; /* Ensures modern browsers render it cleanly */
+    border-radius: 8px;
+    margin-bottom: 5px;
+    display: flex;
+  }
+  
+  .card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .btn.secondary {
+    background-color: transparent;
+    color: gold;
+    border: 1px solid gold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn.secondary:hover {
+    background-color: gold;
+    color: #0f172a;
+  }
+  

@@ -1,0 +1,141 @@
+:root {
+    --bg-color: #0f172a;
+    --accent: #38bdf8;
+    --light: #e2e8f0;
+    --dark: #1e293b;
+    --font: 'Outfit', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font);
+    background: var(--bg-color);
+    color: var(--light);
+    line-height: 1.6;
+  }
+  
+  header {
+    background: var(--dark);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    color: var(--accent);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--light);
+    font-weight: 600;
+  }
+  
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero span {
+    color: #fff;
+  }
+  
+  .hero p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .btn {
+    background: #fff;
+    color: #0ea5e9;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn:hover {
+    background: #0ea5e9;
+    color: white;
+  }
+  
+  section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    background: var(--dark);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .project-card h3 {
+    color: var(--accent);
+  }
+  
+  .project-card a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contact-links i {
+    font-size: 2rem;
+    margin: 0 1rem;
+    transition: transform 0.3s;
+  }
+  
+  .contact-links i:hover {
+    transform: scale(1.2);
+    color: var(--accent);
+  }
+  
+  footer {
+    background: var(--dark);
+    padding: 1rem;
+    text-align: center;
+  }
+  

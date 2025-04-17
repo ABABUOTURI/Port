@@ -1,0 +1,122 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background: #0f172a;
+    position: relative;
+  }
+  
+  header {
+    background: #1e293b;
+    padding: 1rem 2rem;
+    position: sticky;
+    margin: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .nav-links a.active {
+    color: gold;
+    font-weight: bold;
+  }
+  
+  footer {
+    background: #1e293b;
+    text-align: center;
+    padding: 1rem;
+  }
+
+
+  .hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+    padding: 2rem;
+  }
+  
+  .hero-left {
+    z-index: 2;
+    position: relative;
+    color: #fff;
+  }
+  .overview{
+    width: 50%;
+  }
+  .overview p{
+    text-align: center;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: gold;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  #typed-name {
+    font-weight: bold;
+    border-right: 2px solid #0f172a;
+  }
+  
+  /* Background Icons Container */
+  #bg-icons-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  /* Tech Icons */
+  .tech-bg-icon {
+    position: absolute;
+    opacity: 0.15;
+    animation: bounce 5s ease-in-out infinite;
+  }
+  
+  .tech-bg-icon:nth-child(even) {
+    animation-direction: alternate-reverse;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(40px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  

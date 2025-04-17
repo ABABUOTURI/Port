@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Ababu Oturi Portfolio</title>
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+  <div id="bg-icons-container"></div>
+
+  <header>
+    <nav>
+      <div class="logo">E <span style="color: gold;">O</span> A</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero about-hero">
+    <div class="hero-left slide-in">
+      <div class="content">
+        <h1 style="color: gold;">About Me</h1>
+        <p style="font-size: 18px; color: #fff;">Hi, I'm Ababu Emmanuel Oturi 👋</p>
+        <p class="overview" style="font-size: 16px;">
+          I’m a passionate software developer based in Kenya, building impactful solutions in web and mobile development. 
+          My tech stack includes the <span style="color: gold;">MERN stack</span> for full-stack applications and <span style="color: gold;">Flutter</span> for cross-platform mobile apps.
+        </p>
+        <p class="overview" style="font-size: 16px;">
+          With a strong background in clean code, design systems, and UI/UX principles, I love turning ideas into user-friendly digital products.
+        </p>
+        <p class="overview" style="font-size: 16px;">
+          When I’m not coding, I enjoy learning about AI, blogging, mentoring juniors, and exploring how tech can solve real-world problems.
+        </p>
+        <a href="contact.html" class="btn">Let's Connect</a>
+      </div>
+    </div>
+    <div class="hero-right fade-in">
+      <img src="assets/Ababu.jpeg" alt="Ababu Oturi" class="about-img" />
+    </div>
+  </section>
+
+  <section class="info-section fade-up">
+    <h2 style="color: gold;">Skills</h2>
+    <div class="skills-list">
+      <span>MERN Stack</span>
+      <span>Flutter</span>
+      <span>Firebase</span>
+      <span>Next.js</span>
+      <span>Version Control</span>
+      <span>JavaScript</span>
+      <span>Python</span>
+      <span>FastApi</span>
+      <span>MongoDB</span>
+      <span>Sqlite</span>
+      <span>Data visualization</span>
+    </div>
+  </section>
+
+  <section class="info-swiper-container">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 2: Education -->
+        <div class="swiper-slide">
+          <h2 style="color: gold;">Education</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3>BSc in Information Technology</h3>
+              <p><strong>Kabarak University</strong>, Kenya</p>
+              <span>2021 - Present</span>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 1: Experience -->
+        <div class="swiper-slide">
+          <h2 style="color: gold;">Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3>Software Developer Intern</h3>
+              <p><strong>KEMRI-CGHR</strong> - Kisumu, Kenya</p>
+              <p>Interacted with industry technologies used in the organizations.</p>
+              <p>Developed data collection tools hence automating the process of data collection and improving efficiency by 20%.</p>
+              <span>Jan - April (2025)</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Slide 3: Achievements -->
+        <div class="swiper-slide">
+          <h2 style="color: gold;">Achievements</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <ul>
+                <li>Participated in OHS Bootcamp at Kabarak University (Mama’s Hub OpenSource Project Contribution - October-November, 2024)</li>
+                <li>Participated in Central Rift Innovation Week (Project “RETChain” October, 2024)</li>
+                <li>Completed Hackathon on Internet Computer (ICP Hubs Network <a href="https://eu.docworkspace.com/d/sIA7vo--JAeybhbkG" target="_blank">view project</a>, July 2024)</li>
+                <li>Tutoring on Android Development with Kotlin (GDSC - Kabarak University, 2024)</li>
+                <li>Data Science & AI Bootcamp at Kabarak University (Jan-April 2024)</li>
+                <li>Open Health Stack Bootcamp at Kabarak University (May-Aug 2023)</li>
+                <li>Certification in Full Stack Development (June 2022)</li>
+                <li>Mentorship with Ajira Digital on Basics of Programming</li>
+                <li>Certifications in HTML, CSS and Responsive Web Design by SoloLearn (May 2022)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Swiper Navigation -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+  
+  <!-- <section class="certificates fade-up">
+    <h2 style="color: gold;">Certifications</h2>
+    <div class="cert-list">
+      <div class="cert fade-in">
+        <img src="assets/Ababu.jpeg" alt="Ababu Oturi" class="about-img" />
+      </div>
+      <span>Flutter</span>
+      <span>Firebase</span>
+      <span>Next.js</span>
+      <span>Version Control</span>
+      <span>JavaScript</span>
+      <span>Python</span>
+      <span>FastApi</span>
+      <span>MongoDB</span>
+      <span>Sqlite</span>
+      <span>Data visualization</span>
+    </div>
+  </section> -->
+
+  <script src="js/main.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      effect: "slide",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  
+</body>
+</html>
