@@ -5,89 +5,184 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Ababu Oturi Portfolio</title>
   <link rel="stylesheet" href="css/projects.css" />
+  
 </head>
 <body>
   <div id="bg-icons-container"></div>
-
   <header>
     <nav>
       <div class="logo">E <span style="color: gold;">O</span> A</div>
-      <ul class="nav-links">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
+  
 
   <section class="hero">
-    <div class="hero-left">
-      <div class="content">
-        <h1 style="color: gold;" >My Projects</h1>
-        <p class="overview" style="font-size: 16px; color: #fff;">
-          Here are some of the real-world solutions I’ve built, reflecting my passion for development and problem-solving:
-        </p>
+    <div class="content">
+      <h1 style="color: gold;">My Projects</h1>
+      <p class="overview">Explore categorized work that reflects my skills and problem-solving experience:</p>
 
-        <div class="projects-grid">
-          <div class="project-card">
-            <img src="assets/2.png" alt="Real Estate Tokenization" class="project-img">
-            <h3>Sussy's Delights</h3>
-            <p>An online bakery marketplace </p>
-            <p><strong>Tech Stack:</strong> MongoDB, Nextjs</p>
-            <div class="card-buttons">
-              <a href="https://records-b4qr.vercel.app/" target="_blank" class="btn">Live</a>
-              <a href="https://github.com/ABABUOTURI/records" target="_blank" class="btn secondary">GitHub</a>
-            </div>
+      <!-- Filter Buttons -->
+      <div class="filter-buttons">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="web">Web Design</button>
+        <button data-filter="mern">MERN Stack</button>
+        <button data-filter="flutter">Flutter</button>
+        <button data-filter="graphics">Graphics Design</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- MERN Stack -->
+        <div class="project-card" data-category="mern">
+          <img src="assets/2.png" alt="Sussy's Delights" class="project-img">
+          <h3>Sussy's Delights</h3>
+          <p>An online bakery marketplace</p>
+          <p><strong>Tech Stack:</strong> MongoDB, Next.js</p>
+          <div class="card-buttons">
+            <a href="https://records-b4qr.vercel.app/" target="_blank" class="btn">Live</a>
+            <a href="https://github.com/ABABUOTURI/records" target="_blank" class="btn secondary">GitHub</a>
           </div>
-        
-          <div class="project-card">
-            <img src="assets/11.png" alt="Mc Mc-Legendry-University" class="project-img">
-            <h3>Mc Legendry University</h3>
-            <p>This is a web-app based for University.This is to ensure that it is working seamlessy 
-              and everything is accessible at glance.
-            </p>
-            <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
-            <div class="card-buttons">
-              <a href="https://mc-legendry-university.vercel.app/index.html" target="_blank" class="btn">Live</a>
-              <a href="https://github.com/ABABUOTURI/Mc-Legendry-University" target="_blank" class="btn secondary">GitHub</a>
-            </div>
+        </div>
+
+        <!-- Web Design -->
+        <div class="project-card" data-category="web">
+          <img src="assets/11.png" alt="Mc Legendry University" class="project-img">
+          <h3>Mc Legendry University</h3>
+          <p>University Web App for seamless access to academic resources</p>
+          <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+          <div class="card-buttons">
+            <a href="https://mc-legendry-university.vercel.app/index.html" target="_blank" class="btn">Live</a>
+            <a href="https://github.com/ABABUOTURI/Mc-Legendry-University" target="_blank" class="btn secondary">GitHub</a>
           </div>
-        
-          <div class="project-card">
-            <img src="assets/3.png" alt="Influenza" class="project-img">
-            <h3>Influenza Data Collection</h3>
-            <p>The questionnaire is about a study that hopes to investigate if cultural, family socio-economic status, sources of information and social networks influence compliance to sexual abstinence among the adolescent girls in Kisumu</p>
-            <p><strong>Tech Stack:</strong> React, Django, FastAPi, Sqlite</p>
-            <div class="card-buttons">
-              <a href="#" target="_blank" class="btn">Live</a>
-              <a href="https://github.com/ABABUOTURI/InfluenzaQuestionnaire/tree/main" target="_blank" class="btn secondary">GitHub</a>
-            </div>
+        </div>
+
+        <!-- Flutter -->
+        <div class="project-card" data-category="flutter">
+          <img src="assets/3.png" alt="Influenza Data" class="project-img">
+          <h3>Influenza Data Collection</h3>
+          <p>Data collection app for adolescent health study in Kisumu</p>
+          <p><strong>Tech Stack:</strong> React, Django, FastAPI, SQLite</p>
+          <div class="card-buttons">
+            <a href="#" target="_blank" class="btn">Live</a>
+            <a href="https://github.com/ABABUOTURI/InfluenzaQuestionnaire/tree/main" target="_blank" class="btn secondary">GitHub</a>
           </div>
-        
-          <div class="project-card">
-            <img src="assets/4.png" alt="Asthma" class="project-img">
-            <h3>Clustering Asthma Data</h3>
-            <p>The project was about analyzing the asthma dataset and visulaizing the outcomes "Using ML Algorithms"</p>
-            <p><strong>Tech Stack:</strong> React, Python"ML"", Flask, Sqlite</p>
-            <div class="card-buttons">
-              <a href="#" target="_blank" class="btn">Live</a>
-              <a href="#" target="_blank" class="btn secondary">GitHub</a>
-            </div>
+        </div>
+
+        <!-- Graphics Projects -->
+        <div class="project-card graphics" data-category="graphics">
+          <img src="assets/fh.png" alt="Sunday Service Poster" class="project-img" onclick="openModal('assets/fh.png')">
+          <h3>Sunday Service Poster Design</h3>
+          <p>A warm and inviting poster crafted on Canva to promote a special Sunday worship service.
+            It features uplifting visuals, soft gradients, and clear event details for print and digital use.
+            Targeted at church members and guests, it helped boost attendance and community engagement.</p>
+          <p><strong>Tools:</strong> Canva</p>
+          <div class="card-buttons">
+            <!-- <a href="https://www.canva.com/design/your-poster-link" class="btn" target="_blank">View on Canva</a> -->
+            <a href="#" class="btn secondary" onclick="openModal('assets/fh.png')">Preview</a>
+          </div>
+        </div>
+
+        <div class="project-card graphics" data-category="graphics">
+          <img src="assets/hf.png" alt="Sunday Service Poster" class="project-img" onclick="openModal('assets/hf.png')">
+          <h3>Sunday Service Poster Design</h3>
+          <p>A warm and inviting poster crafted on Canva to promote a special Sunday worship service.
+            It features uplifting visuals, soft gradients, and clear event details for print and digital use.
+            Targeted at church members and guests, it helped boost attendance and community engagement.</p>
+          <p><strong>Tools:</strong> Canva</p>
+          <div class="card-buttons">
+            <!-- <a href="https://www.canva.com/design/your-poster-link" class="btn" target="_blank">View on Canva</a> -->
+            <a href="#" class="btn secondary" onclick="openModal('assets/hf.png')">Preview</a>
           </div>
         </div>
         
 
-        <a href="contact.html" class="btn">Hire Me</a>
+        <div class="project-card graphics" data-category="graphics">
+          <img src="assets/G.png" alt="Sunday Service Poster" class="project-img" onclick="openModal('assets/G.png')">
+          <h3>Madarak Day Poster Design</h3>
+          <p>A bold and patriotic poster crafted on Canva to celebrate Madaraka Day.  
+            Featuring national colors, symbolic imagery, and event highlights,  
+            the design aims to inspire unity and pride.  
+            Ideal for  social media distribution.</p>
+         
+          <p><strong>Tools:</strong> Canva</p>
+          <div class="card-buttons">
+            <!-- <a href="https://www.canva.com/design/your-poster-link" class="btn" target="_blank">View on Canva</a> -->
+            <a href="#" class="btn secondary" onclick="openModal('assets/G.png')">Preview</a>
+          </div>
+        </div>
+
+        <div class="project-card graphics" data-category="graphics">
+          <img src="assets/g1.png" alt="Sunday Service Poster" class="project-img" onclick="openModal('assets/g1.png')">
+          <h3>Sunday Seminar Poster Design</h3>
+          <p>A clean and professional poster crafted on Canva to promote Men's Seminar organized by Redeemed Gospel Church.  
+            It features engaging visuals, a structured layout, and clearly presented event details.  
+            Designed to resonate with men of all ages, encouraging spiritual growth and fellowship.  
+            Optimized for both print and digital sharing to maximize outreach and engagement.</p>
+         
+          <p><strong>Tools:</strong> Canva</p>
+          <div class="card-buttons">
+            <!-- <a href="https://www.canva.com/design/your-poster-link" class="btn" target="_blank">View on Canva</a> -->
+            <a href="#" class="btn secondary" onclick="openModal('assets/g1.png')">Preview</a>
+          </div>
+        </div>
       </div>
+
+      <a href="contact.html" class="btn" style="margin-top: 2rem;">Hire Me</a>
     </div>
   </section>
+<!-- Image Modal -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
 
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('show');
+  }
+</script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterButtons = document.querySelectorAll('.filter-buttons button');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          const filter = button.getAttribute('data-filter');
+
+          projectCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+
+    function openModal(src) {
+  document.getElementById('imgModal').style.display = "block";
+  document.getElementById('modalImage').src = src;
+}
+
+function closeModal() {
+  document.getElementById('imgModal').style.display = "none";
+}
+
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-
-

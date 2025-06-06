@@ -12,6 +12,8 @@ body, html {
     background: #1e293b;
     padding: 1rem 2rem;
     position: sticky;
+    top: 0;
+    z-index: 100;
     margin: 10px 20px;
     border-radius: 8px;
   }
@@ -20,11 +22,21 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
   
   .logo {
     font-size: 1.5rem;
     color: #fff;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
   }
   
   .nav-links {
@@ -41,6 +53,29 @@ body, html {
   .nav-links a.active {
     color: gold;
     font-weight: bold;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    .nav-links li {
+      text-align: center;
+      padding: 0.5rem 0;
+    }
   }
   
   footer {

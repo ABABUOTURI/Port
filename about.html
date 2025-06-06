@@ -19,7 +19,8 @@
   <header>
     <nav>
       <div class="logo">E <span style="color: gold;">O</span> A</div>
-      <ul class="nav-links">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -27,122 +28,133 @@
       </ul>
     </nav>
   </header>
+  
+  
 
   <section class="hero about-hero">
     <div class="hero-left slide-in">
       <div class="content">
         <h1 style="color: gold;">About Me</h1>
         <p style="font-size: 18px; color: #fff;">Hi, I'm Ababu Emmanuel Oturi 👋</p>
-        <p class="overview" style="font-size: 16px;">
-          I’m a passionate software developer based in Kenya, building impactful solutions in web and mobile development. 
-          My tech stack includes the <span style="color: gold;">MERN stack</span> for full-stack applications and <span style="color: gold;">Flutter</span> for cross-platform mobile apps.
-        </p>
-        <p class="overview" style="font-size: 16px;">
-          With a strong background in clean code, design systems, and UI/UX principles, I love turning ideas into user-friendly digital products.
-        </p>
-        <p class="overview" style="font-size: 16px;">
-          When I’m not coding, I enjoy learning about AI, blogging, mentoring juniors, and exploring how tech can solve real-world problems.
-        </p>
-        <a href="contact.html" class="btn">Let's Connect</a>
+          <p class="overview" style="font-size: 16px;">
+          I specialize in designing beautiful, responsive WordPress websites that are both user-friendly and conversion-driven. As a MERN Stack Developer, I build fast, scalable web applications using MongoDB, Express.js, React.js, and Node.js. I also develop seamless cross-platform mobile apps using Flutter, turning innovative ideas into functional mobile experiences.
+            I love solving real-world problems with clean code and thoughtful design. Whether you need a dynamic website, a custom web app, or a mobile solution, I’m here to bring your vision to life — pixel by pixel, line by line.
+          </p>
+            <a href="tel:+254714205641" class="btn">
+              <i class="fas fa-phone-alt"></i> Let's Connect
+            </a>
       </div>
     </div>
     <div class="hero-right fade-in">
       <img src="assets/Ababu.jpeg" alt="Ababu Oturi" class="about-img" />
     </div>
   </section>
-
-  <section class="info-section fade-up">
-    <h2 style="color: gold;">Skills</h2>
-    <div class="skills-list">
-      <span>MERN Stack</span>
-      <span>Flutter</span>
-      <span>Firebase</span>
-      <span>Next.js</span>
-      <span>Version Control</span>
-      <span>JavaScript</span>
-      <span>Python</span>
-      <span>FastApi</span>
-      <span>MongoDB</span>
-      <span>Sqlite</span>
-      <span>Data visualization</span>
-    </div>
-  </section>
-
-  <section class="info-swiper-container">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <!-- Slide 2: Education -->
-        <div class="swiper-slide">
-          <h2 style="color: gold;">Education</h2>
-          <div class="timeline">
-            <div class="timeline-item">
-              <h3>BSc in Information Technology</h3>
-              <p><strong>Kabarak University</strong>, Kenya</p>
-              <span>2021 - Present</span>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 1: Experience -->
-        <div class="swiper-slide">
-          <h2 style="color: gold;">Experience</h2>
-          <div class="timeline">
-            <div class="timeline-item">
-              <h3>Software Developer Intern</h3>
-              <p><strong>KEMRI-CGHR</strong> - Kisumu, Kenya</p>
-              <p>Interacted with industry technologies used in the organizations.</p>
-              <p>Developed data collection tools hence automating the process of data collection and improving efficiency by 20%.</p>
-              <span>Jan - April (2025)</span>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Slide 3: Achievements -->
-        <div class="swiper-slide">
-          <h2 style="color: gold;">Achievements</h2>
-          <div class="timeline">
-            <div class="timeline-item">
-              <ul>
-                <li>Participated in OHS Bootcamp at Kabarak University (Mama’s Hub OpenSource Project Contribution - October-November, 2024)</li>
-                <li>Participated in Central Rift Innovation Week (Project “RETChain” October, 2024)</li>
-                <li>Completed Hackathon on Internet Computer (ICP Hubs Network <a href="https://eu.docworkspace.com/d/sIA7vo--JAeybhbkG" target="_blank">view project</a>, July 2024)</li>
-                <li>Tutoring on Android Development with Kotlin (GDSC - Kabarak University, 2024)</li>
-                <li>Data Science & AI Bootcamp at Kabarak University (Jan-April 2024)</li>
-                <li>Open Health Stack Bootcamp at Kabarak University (May-Aug 2023)</li>
-                <li>Certification in Full Stack Development (June 2022)</li>
-                <li>Mentorship with Ajira Digital on Basics of Programming</li>
-                <li>Certifications in HTML, CSS and Responsive Web Design by SoloLearn (May 2022)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+<section class="skills-section fade-up">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-grid">
+    <!-- Mobile & Web -->
+    <div class="skill-card">
+      <h3>Mobile &amp; Web Development</h3>
+      <div class="tags">
+        <span>Flutter&nbsp;(Dart)</span>
+        <span>React&nbsp;/ Next.js</span>
+        <span>Tailwind&nbsp;CSS</span>
       </div>
-      <!-- Swiper Navigation -->
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
     </div>
-  </section>
-  
-  <!-- <section class="certificates fade-up">
-    <h2 style="color: gold;">Certifications</h2>
-    <div class="cert-list">
-      <div class="cert fade-in">
-        <img src="assets/Ababu.jpeg" alt="Ababu Oturi" class="about-img" />
+
+    <!-- Backend & Database -->
+    <div class="skill-card">
+      <h3>Backend &amp; Database</h3>
+      <div class="tags">
+        <span>Node.js/Express.js</span>
+        <span>MongoDB & Firebase</span>
+        <span>SQLite & Hive</span>
+        <span>MySQL</span>
       </div>
-      <span>Flutter</span>
-      <span>Firebase</span>
-      <span>Next.js</span>
-      <span>Version Control</span>
-      <span>JavaScript</span>
-      <span>Python</span>
-      <span>FastApi</span>
-      <span>MongoDB</span>
-      <span>Sqlite</span>
-      <span>Data visualization</span>
     </div>
-  </section> -->
+
+    <!-- AI & ML -->
+    <div class="skill-card">
+      <h3>AI &amp; Machine Learning</h3>
+      <div class="tags">
+        <span>TensorFlow</span>
+        <span>Time-Series&nbsp;Forecasting</span>
+        <span>Data&nbsp;Visualization</span>
+      </div>
+    </div>
+
+    <!-- SD Best Practices -->
+    <div class="skill-card">
+      <h3>Software Dev Best Practices</h3>
+      <div class="tags">
+        <span>State&nbsp;Management</span>
+        <span>API&nbsp;Integration</span>
+        <span>Agile&nbsp;Methodologies</span>
+      </div>
+    </div>
+
+    <!-- DevOps & Version Control -->
+    <div class="skill-card">
+      <h3>DevOps &amp; Version Control</h3>
+      <div class="tags">
+        <span>Git / GitHub</span>
+        <span>CI/CD&nbsp;Pipelines</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="info-cards-section">
+  <div class="info-cards-container">
+    <!-- Education Card -->
+    <div class="info-card">
+      <h3>🎓 Education</h3>
+      <div class="timeline-item">
+        <h4>BSc in Information Technology</h4>
+        <p><strong>Kabarak University</strong>, Kenya</p>
+        <span>2021 - Present</span>
+      </div>
+    </div>
+
+    <!-- Experience Card -->
+    <div class="info-card">
+      <h3>💼 Experience</h3>
+      <div class="timeline-item">
+        <h4>Software Developer Intern</h4>
+        <p><strong>KEMRI-CGHR</strong> - Kisumu, Kenya</p>
+        <p>Interacted with industry technologies used in the organization.</p>
+        <p>Developed data collection tools, improving efficiency by 20%.</p>
+        <span>Jan - April 2025</span>
+      </div>
+    </div>
+
+    <!-- Achievements Card -->
+    <div class="info-card">
+      <h3>🏆 Achievements</h3>
+      <ul>
+        <li>Currently enrolled to Introduction to Cybersecurity(Havard University)</li>
+        <li>Skies Incubation Program-Real Estate Tokenization(2024)</li>
+        <li>OHS Bootcamp - Mama’s Hub Open Source (Oct–Nov 2024)</li>
+        <li>RETChain Project – Central Rift Innovation Week (Oct 2024)</li>
+        <li>Hackathon - Internet Computer (ICP) – <a href="https://eu.docworkspace.com/d/sIA7vo--JAeybhbkG" target="_blank">view project</a></li>
+        <li>Tutor - Android Dev Kotlin (GDSC Kabarak, 2024)</li>
+        <li>AI & Data Science Bootcamp (Jan–Apr 2024)</li>
+        <li>OHS Bootcamp (May–Aug 2023)</li>
+        <li>Full Stack Certification (June 2022)</li>
+        <li>Ajira Digital Mentorship – Basics of Programming</li>
+        <li>HTML, CSS, Responsive Web Design - SoloLearn (May 2022)</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
   <script src="js/main.js"></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+  
   <script>
     const swiper = new Swiper(".mySwiper", {
       effect: "slide",

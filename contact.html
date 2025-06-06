@@ -13,14 +13,16 @@
   <header>
     <nav>
       <div class="logo">E <span style="color: gold;">O</span> A</div>
-      <ul class="nav-links">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
+  
 
   <section class="hero">
     <div class="hero-left">
@@ -55,5 +57,12 @@
   </section>
 
   <script src="js/main.js"></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+  
 </body>
 </html>

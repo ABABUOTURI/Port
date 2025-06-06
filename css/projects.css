@@ -12,6 +12,8 @@ body, html {
     background: #1e293b;
     padding: 1rem 2rem;
     position: sticky;
+    top: 0;
+    z-index: 100;
     margin: 10px 20px;
     border-radius: 8px;
   }
@@ -20,11 +22,21 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
   
   .logo {
     font-size: 1.5rem;
     color: #fff;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
   }
   
   .nav-links {
@@ -43,11 +55,30 @@ body, html {
     font-weight: bold;
   }
   
-  footer {
-    background: #1e293b;
-    text-align: center;
-    padding: 1rem;
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    .nav-links li {
+      text-align: center;
+      padding: 0.5rem 0;
+    }
   }
+  
+  
 
   .btn {
     padding: 10px 20px;
@@ -58,6 +89,29 @@ body, html {
     border-radius: 5px;
     margin-top: 2%;
   }
+  .filter-buttons {
+    margin-top: 20px;
+  }
+
+  .filter-buttons button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px 5px;
+    border: 2px solid gold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .filter-buttons button.active,
+  .filter-buttons button:hover {
+    background-color: gold;
+    color: black;
+  }
+  
   .hero {
     height: 70vh;
     align-items: center;
@@ -104,58 +158,105 @@ body, html {
 
 /* Project Cards Grid */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+h3{
+  color: white;
+}
+p{
+  color:white;
+}
+.project-card {
+  background-color: #1e293b;
+  border-radius: 10px;
+  padding: 1rem;
+  width: calc(33.33% - 2rem);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+.project-card[data-category="graphics"] {
+  width: calc(25% - 2rem);
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 8px;
+  height: 180px;
+  object-fit: cover;
+}
   
+.card-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 8px 16px;
+  background-color: gold;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: gold;
+  border: 2px solid gold;
+}
+
+@media screen and (max-width: 992px) {
   .project-card {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid gold;
-    border-radius: 12px;
-    padding: 15px;
-    color: #fff;
-    transition: transform 0.3s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
-  }
-  
-  .project-card h3 {
-    color: gold;
-    margin-bottom: 10px;
+    width: calc(50% - 2rem);
   }
 
+  .project-card[data-category="graphics"] {
+    width: calc(50% - 2rem);
+  }
+}
 
-  .project-img {
+@media screen and (max-width: 600px) {
+  .project-card {
     width: 100%;
-    height: 200px; /* Removes stretching and keeps natural height */
-    object-fit: contain; /* Ensures image scales properly without distortion */
-    image-rendering: auto; /* Ensures modern browsers render it cleanly */
-    border-radius: 8px;
-    margin-bottom: 5px;
-    display: flex;
   }
-  
-  .card-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
+
+  .project-card[data-category="graphics"] {
+    width: 100%;
   }
-  
-  .btn.secondary {
-    background-color: transparent;
-    color: gold;
-    border: 1px solid gold;
-    transition: background-color 0.3s;
-  }
-  
-  .btn.secondary:hover {
-    background-color: gold;
-    color: #0f172a;
-  }
-  
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  background-color: transparent;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
