@@ -5,23 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Ababu Oturi Portfolio</title>
   <link rel="stylesheet" href="css/projects.css" />
-  
 </head>
 <body>
   <div id="bg-icons-container"></div>
+
   <header>
     <nav>
       <div class="logo">E <span style="color: gold;">O</span> A</div>
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html" >About</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
-  
 
   <section class="hero">
     <div class="content">
@@ -41,7 +40,7 @@
       <div class="projects-grid">
         <!-- MERN Stack -->
         <div class="project-card" data-category="mern">
-          <img src="assets/2.png" alt="Sussy's Delights" class="project-img">
+          <img src="assets/j1.png" alt="Sussy's Delights" class="project-img">
           <h3>Sussy's Delights</h3>
           <p>An online bakery marketplace</p>
           <p><strong>Tech Stack:</strong> MongoDB, Next.js</p>
@@ -63,73 +62,68 @@
           </div>
         </div>
 
-        <!-- Flutter -->
+        <!-- Flutter Web -->
         <div class="project-card" data-category="flutter">
-          <img src="assets/3.png" alt="Influenza Data" class="project-img">
-          <h3>Influenza Data Collection</h3>
-          <p>Data collection app for adolescent health study in Kisumu</p>
-          <p><strong>Tech Stack:</strong> React, Django, FastAPI, SQLite</p>
+          <img src="assets/43.png" alt="Influenza Data" class="project-img">
+          <h3>Influenza Web Data Interface</h3>
+          <p>Data collection Web-app for adolescent health study in Kisumu (Admin, Data Team, Supervisors).</p>
+          <p><strong>Tech Stack:</strong> React, MongoDB, Node.js/Express</p>
           <div class="card-buttons">
-            <a href="#" target="_blank" class="btn">Live</a>
+            <a href="#" class="btn">Live</a>
             <a href="https://github.com/ABABUOTURI/InfluenzaQuestionnaire/tree/main" target="_blank" class="btn secondary">GitHub</a>
           </div>
         </div>
 
-        <!-- Graphics Projects -->
+        <!-- Flutter App -->
+        <div class="project-card" data-category="flutter">
+          <img src="assets/3.png" alt="Influenza Mobile App" class="project-img">
+          <h3>Influenza Data App</h3>
+          <p>Mobile app for adolescent health data collection in Kisumu.</p>
+          <p><strong>Tech Stack:</strong> Flutter, SQLite</p>
+          <div class="card-buttons">
+            <a href="javascript:void(0)" onclick="openSlideshowModal()" class="btn secondary">Preview</a>
+            <a href="https://github.com/ABABUOTURI/InfluenzaQuestionnaire/tree/main" target="_blank" class="btn secondary">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Graphics -->
         <div class="project-card graphics" data-category="graphics">
-          <img src="assets/fh.png" alt="Sunday Service Poster" class="project-img" onclick="openModal('assets/fh.png')">
-          <h3>Sunday Service Poster Design</h3>
-          <p>A warm and inviting poster crafted on Canva to promote a special Sunday worship service.
-            It features uplifting visuals, soft gradients, and clear event details for print and digital use.
-            Targeted at church members and guests, it helped boost attendance and community engagement.</p>
+          <img src="assets/fh.png" alt="Sunday Poster" class="project-img" onclick="openImageModal('assets/fh.png')">
+          <h3>Sunday Service Poster</h3>
+          <p>Crafted on Canva with uplifting visuals and gradients for promoting worship service.</p>
           <p><strong>Tools:</strong> Canva</p>
           <div class="card-buttons">
-            <!-- <a href="https://www.canva.com/design/your-poster-link" class="btn" target="_blank">View on Canva</a> -->
-            <a href="#" class="btn secondary" onclick="openModal('assets/fh.png')">Preview</a>
+            <a href="#" class="btn secondary" onclick="openImageModal('assets/fh.png')">Preview</a>
           </div>
         </div>
 
         <div class="project-card graphics" data-category="graphics">
-          <img src="assets/hf.png" alt="Sunday Service Poster" class="project-img" onclick="openModal('assets/hf.png')">
-          <h3>Sunday Service Poster Design</h3>
-          <p>A warm and inviting poster crafted on Canva to promote a special Sunday worship service.
-            It features uplifting visuals, soft gradients, and clear event details for print and digital use.
-            Targeted at church members and guests, it helped boost attendance and community engagement.</p>
+          <img src="assets/hf.png" alt="Sunday Poster 2" class="project-img" onclick="openImageModal('assets/hf.png')">
+          <h3>Sunday Service Poster 2</h3>
+          <p>Engaging visuals and elegant layout created on Canva.</p>
           <p><strong>Tools:</strong> Canva</p>
           <div class="card-buttons">
-            <!-- <a href="https://www.canva.com/design/your-poster-link" class="btn" target="_blank">View on Canva</a> -->
-            <a href="#" class="btn secondary" onclick="openModal('assets/hf.png')">Preview</a>
-          </div>
-        </div>
-        
-
-        <div class="project-card graphics" data-category="graphics">
-          <img src="assets/G.png" alt="Sunday Service Poster" class="project-img" onclick="openModal('assets/G.png')">
-          <h3>Madarak Day Poster Design</h3>
-          <p>A bold and patriotic poster crafted on Canva to celebrate Madaraka Day.  
-            Featuring national colors, symbolic imagery, and event highlights,  
-            the design aims to inspire unity and pride.  
-            Ideal for  social media distribution.</p>
-         
-          <p><strong>Tools:</strong> Canva</p>
-          <div class="card-buttons">
-            <!-- <a href="https://www.canva.com/design/your-poster-link" class="btn" target="_blank">View on Canva</a> -->
-            <a href="#" class="btn secondary" onclick="openModal('assets/G.png')">Preview</a>
+            <a href="#" class="btn secondary" onclick="openImageModal('assets/hf.png')">Preview</a>
           </div>
         </div>
 
         <div class="project-card graphics" data-category="graphics">
-          <img src="assets/g1.png" alt="Sunday Service Poster" class="project-img" onclick="openModal('assets/g1.png')">
-          <h3>Sunday Seminar Poster Design</h3>
-          <p>A clean and professional poster crafted on Canva to promote Men's Seminar organized by Redeemed Gospel Church.  
-            It features engaging visuals, a structured layout, and clearly presented event details.  
-            Designed to resonate with men of all ages, encouraging spiritual growth and fellowship.  
-            Optimized for both print and digital sharing to maximize outreach and engagement.</p>
-         
+          <img src="assets/G.png" alt="Madaraka Day" class="project-img" onclick="openImageModal('assets/G.png')">
+          <h3>Madaraka Day Poster</h3>
+          <p>Celebrating national unity with patriotic design created in Canva.</p>
           <p><strong>Tools:</strong> Canva</p>
           <div class="card-buttons">
-            <!-- <a href="https://www.canva.com/design/your-poster-link" class="btn" target="_blank">View on Canva</a> -->
-            <a href="#" class="btn secondary" onclick="openModal('assets/g1.png')">Preview</a>
+            <a href="#" class="btn secondary" onclick="openImageModal('assets/G.png')">Preview</a>
+          </div>
+        </div>
+
+        <div class="project-card graphics" data-category="graphics">
+          <img src="assets/g1.png" alt="Men's Seminar" class="project-img" onclick="openImageModal('assets/g1.png')">
+          <h3>Men's Seminar Poster</h3>
+          <p>Clean and professional layout designed to encourage fellowship and engagement.</p>
+          <p><strong>Tools:</strong> Canva</p>
+          <div class="card-buttons">
+            <a href="#" class="btn secondary" onclick="openImageModal('assets/g1.png')">Preview</a>
           </div>
         </div>
       </div>
@@ -137,20 +131,38 @@
       <a href="contact.html" class="btn" style="margin-top: 2rem;">Hire Me</a>
     </div>
   </section>
-<!-- Image Modal -->
-<div id="imgModal" class="modal" onclick="closeModal()">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modalImage">
-</div>
 
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('show');
-  }
-</script>
+  <!-- Single Image Modal -->
+  <div id="imgModal" class="modal" onclick="closeImageModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <!-- Slideshow Modal -->
+  <div id="previewSlideshow" class="modal">
+    <span class="close" onclick="closeSlideshowModal()">&times;</span>
+    <div class="modals-content">
+      <div class="slides">
+        <img src="assets/1.png" class="preview-slide" style="display: none;">
+        <img src="assets/2.png" class="preview-slide" style="display: none;">
+        <img src="assets/3.png" class="preview-slide" style="display: none;">
+        <img src="assets/4.png" class="preview-slide" style="display: none;">
+        <img src="assets/5.png" class="preview-slide" style="display: none;">
+        <img src="assets/6.png" class="preview-slide" style="display: none;">
+      </div>
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+  </div>
 
   <script>
+    // Toggle mobile nav
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+
+    // Filter logic
     document.addEventListener('DOMContentLoaded', () => {
       const filterButtons = document.querySelectorAll('.filter-buttons button');
       const projectCards = document.querySelectorAll('.project-card');
@@ -159,30 +171,52 @@
         button.addEventListener('click', () => {
           filterButtons.forEach(btn => btn.classList.remove('active'));
           button.classList.add('active');
-
           const filter = button.getAttribute('data-filter');
 
           projectCards.forEach(card => {
-            if (filter === 'all' || card.getAttribute('data-category') === filter) {
-              card.style.display = 'block';
-            } else {
-              card.style.display = 'none';
-            }
+            card.style.display = (filter === 'all' || card.getAttribute('data-category') === filter) ? 'block' : 'none';
           });
         });
       });
     });
 
-    function openModal(src) {
-  document.getElementById('imgModal').style.display = "block";
-  document.getElementById('modalImage').src = src;
-}
+    // Single Image Modal
+    function openImageModal(src) {
+      document.getElementById('imgModal').style.display = "block";
+      document.getElementById('modalImage').src = src;
+    }
 
-function closeModal() {
-  document.getElementById('imgModal').style.display = "none";
-}
+    function closeImageModal() {
+      document.getElementById('imgModal').style.display = "none";
+    }
 
+    // Slideshow Modal
+    let slideIndex = 0;
+    function openSlideshowModal() {
+      document.getElementById("previewSlideshow").style.display = "block";
+      slideIndex = 0;
+      showSlide(slideIndex);
+    }
+
+    function closeSlideshowModal() {
+      document.getElementById("previewSlideshow").style.display = "none";
+    }
+
+    function changeSlide(n) {
+      slideIndex += n;
+      const slides = document.getElementsByClassName("preview-slide");
+      if (slideIndex >= slides.length) slideIndex = 0;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      showSlide(slideIndex);
+    }
+
+    function showSlide(n) {
+      const slides = document.getElementsByClassName("preview-slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[n].style.display = "block";
+    }
   </script>
-  <script src="js/main.js"></script>
 </body>
 </html>
