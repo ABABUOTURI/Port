@@ -8,12 +8,13 @@
 }
 
 /* Global Styles */
-html, body {
+body, html {
+  margin: 0;
+  padding: 0;
   height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
   overflow-x: hidden;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #fff;
+  background: #0f172a;
   position: relative;
 }
 
@@ -22,14 +23,11 @@ html, body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  background: url('assets/bg-icons.svg') repeat;
-  animation: moveIcons 40s linear infinite;
-  opacity: 0.05;
 }
 
 .tech-bg-icon {
@@ -136,14 +134,44 @@ nav {
   z-index: 1;
 }
 
-.hero-left,
-.hero-right {
-  flex: 1 1 400px;
-  max-width: 500px;
+/* Base styles */
+.hero.about-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-direction: row; /* default for large screens */
 }
 
-.hero-left {
-  margin-left: 5%;
+.hero-left,
+.hero-right {
+  flex: 1;
+}
+.about-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  mix-blend-mode: screen;
+  animation: softBounce 5s ease-in-out infinite;
+  transition: transform 0.3s ease-in-out;
+} 
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .hero.about-hero {
+    flex-direction: column; /* stack on small screens */
+    text-align: center;
+  }
+
+  .hero-right {
+    order: -1; /* move image to top */
+  }
+
+  .about-img {
+    margin-bottom: 1rem;
+  }
 }
 
 /* Content */
@@ -184,16 +212,7 @@ nav {
 }
 
 /* Images */
-.about-img {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  border-radius: 50%;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  mix-blend-mode: screen;
-  animation: softBounce 5s ease-in-out infinite;
-  transition: transform 0.3s ease-in-out;
-}
+
 
 .about-img:hover {
   transform: scale(1.05);
