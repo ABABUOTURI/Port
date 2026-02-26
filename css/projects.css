@@ -312,12 +312,59 @@ footer {
     display: flex;
   }
 
+  .hero {
+    padding: 1rem;
+  }
+
+  .content {
+    width: 100%;
+  }
+
   .hero h1 {
     font-size: 1.75rem;
   }
 
   .hero .overview {
     font-size: 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .filter-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto 2rem;
+  }
+
+  .filter-buttons button {
+    width: 100%;
+    min-width: 0;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.8rem;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .card-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .card-buttons .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 
   .btn {
@@ -331,8 +378,17 @@ footer {
 }
 
 @media (max-width: 480px) {
+  header {
+    margin: 8px 10px;
+    padding: 0.8rem 1rem;
+  }
+
   .logo {
     font-size: 1.2rem;
+  }
+
+  .hero {
+    padding: 1rem 0.75rem;
   }
 
   .hero h1 {
@@ -343,13 +399,23 @@ footer {
     font-size: 0.9rem;
   }
 
+  .projects-grid {
+    padding: 0;
+  }
+
+  .filter-buttons {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .btn {
+    display: block;
+    width: 100%;
     font-size: 0.8rem;
     padding: 7px 14px;
+    text-align: center;
   }
 
   .tech-bg-icon {
     max-width: 30px;
   }
 }
-
