@@ -58,6 +58,7 @@
           <p><strong style="color: gold;">Tech Stack:</strong> Supabase <span  style="color: gold;">|</span> HTML <span  style="color: gold;">|</span> CSS <span  style="color: gold;">|</span> JavaScript</p>
           <div class="card-buttons">
             <a href="https://ems-rouge-seven.vercel.app/" target="_blank" class="btn">Live</a>
+            <a href="javascript:void(0)" class="btn" onclick="openDemoModal()">Demo Credentials</a>
             <!-- <a href="https://github.com/ABABUOTURI/records" target="_blank" class="btn secondary">GitHub</a> -->
           </div>
         </div>
@@ -197,6 +198,40 @@
     </div>
   </div>
 
+  <!-- Demo Credentials Modal -->
+  <div id="demoModal" class="demo-modal" onclick="closeDemoModal(event)">
+    <div class="demo-modal-content">
+      <button class="demo-close" onclick="closeDemoModal()">&times;</button>
+      <h3 class="demo-title">Demo Credentials</h3>
+      <div class="demo-credentials">
+        <div class="demo-block">
+          <h4>King (Employee)</h4>
+          <p>Email: king@gmail.com</p>
+          <p>Work ID: EMP-0002</p>
+          <p>Password: king005</p>
+        </div>
+        <div class="demo-block">
+          <h4>Junior (HR)</h4>
+          <p>Email: junior@gmail.com</p>
+          <p>Work ID: HR-0001</p>
+          <p>Password: junior003</p>
+        </div>
+        <div class="demo-block">
+          <h4>Legend (Managing Director)</h4>
+          <p>Email: legend@gmail.com</p>
+          <p>Work ID: MD-0001</p>
+          <p>Password: legend004</p>
+        </div>
+        <div class="demo-block">
+          <h4>Oturi (Supervisor)</h4>
+          <p>Email: oturi@gmail.com</p>
+          <p>Work ID: S-0001</p>
+          <p>Password: oturi002</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     // Toggle mobile nav
     function toggleMenu() {
@@ -258,6 +293,17 @@
         slides[i].style.display = "none";
       }
       slides[n].style.display = "block";
+    }
+
+    // Demo credentials modal
+    function openDemoModal() {
+      document.getElementById("demoModal").style.display = "block";
+    }
+
+    function closeDemoModal(event) {
+      if (!event || event.target.id === "demoModal") {
+        document.getElementById("demoModal").style.display = "none";
+      }
     }
   </script>
 </body>
